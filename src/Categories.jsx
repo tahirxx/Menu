@@ -1,6 +1,5 @@
-import React from 'react'
-
-export default function ({ categories,filterItems,saleItem }) {
+import PropTypes from 'prop-types';
+export default function Categories({ categories, filterItems, saleItem }) {
   return (
     <div className='btn-container'>
       
@@ -22,3 +21,9 @@ export default function ({ categories,filterItems,saleItem }) {
     </div>
   )
 }
+
+Categories.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  filterItems: PropTypes.func.isRequired,
+  saleItem: PropTypes.func.isRequired,
+};
